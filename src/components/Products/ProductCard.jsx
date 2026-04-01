@@ -6,8 +6,8 @@ const ProductCard = ({ product, handleAddToCart }) => {
       <div className="card w-96 bg-base-100 shadow-sm">
         <div className="card-body">
           <div className="flex justify-between flex-row-reverse">
-            <span className="badge badge-xs badge-warning">Most Popular</span>
-            <span>hi</span>
+            <span className="badge badge-xs badge-warning">{product.pop}</span>
+            <img src={product.image} alt="" />
           </div>
           <div className="flex justify-between">
             <h2 className="text-xl font-bold">{product.name}</h2>
