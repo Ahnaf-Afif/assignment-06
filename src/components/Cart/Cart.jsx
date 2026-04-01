@@ -1,7 +1,9 @@
 import React from "react";
 import CartItem from "./CartItem";
 
-const Cart = ({ cart, handleRemoveFromCart }) => {
+const Cart = ({ cart, handleRemoveFromCart, setCheckout }) => {
+  const total = cart.reduce((sum, item) => sum + item.price.amount, 0);
+
   return (
     <div>
       {cart.length === 0 ? (
@@ -31,9 +33,12 @@ const Cart = ({ cart, handleRemoveFromCart }) => {
           </div>
           <div className="flex justify-between items-center pt-10 pb-5">
             <p>Total</p>
-            <p className="font-bold text-xl">$29</p>
+            <p className="font-bold text-xl">${total}</p>
           </div>
-          <button className="btn btn-primary rounded-full w-full">
+          <button
+            onClick={() => setCheckout(true)}
+            className="btn btn-primary rounded-full w-full"
+          >
             Checkout
           </button>
         </div>

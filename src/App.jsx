@@ -26,6 +26,10 @@ const App = () => {
     }
   };
 
+  const setCheckout = () => {
+    setCart([]);
+  };
+
   return (
     <div data-theme="light" className="min-h-screen bg-white text-black">
       <Navbar />
@@ -39,7 +43,11 @@ const App = () => {
       {activeTab === "products" ? (
         <ProductList handleAddToCart={handleAddToCart} />
       ) : (
-        <Cart cart={cart} handleRemoveFromCart={handleRemoveFromCart} />
+        <Cart
+          cart={cart}
+          setCheckout={setCheckout}
+          handleRemoveFromCart={handleRemoveFromCart}
+        />
       )}
       <GetStarted />
       <GetStartedCard />
