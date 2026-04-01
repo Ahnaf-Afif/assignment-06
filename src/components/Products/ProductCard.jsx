@@ -1,6 +1,6 @@
 import React from "react";
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, handleAddToCart }) => {
   return (
     <div>
       <div className="card w-96 bg-base-100 shadow-sm">
@@ -40,7 +40,10 @@ const ProductCard = ({ product }) => {
             </ul>
           </ul>
           <div className="mt-6">
-            <button className="btn btn-primary btn-block rounded-full bg-linear-to-r from-[#5a2df7] to-[#c215ff]">
+            <button
+              onClick={() => handleAddToCart(product)}
+              className="btn btn-primary btn-block rounded-full bg-linear-to-r from-[#5a2df7] to-[#c215ff]"
+            >
               Buy Now
             </button>
           </div>

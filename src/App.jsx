@@ -10,13 +10,24 @@ import { useState } from "react";
 
 const App = () => {
   const [activeTab, setActiveTab] = useState("cart");
+  const [cart, setCart] = useState([]);
+  const handleAddToCart = (product) => {
+    setCart([...cart, product]);
+  };
+  const handleRemoveFromCart = (product) => {
+    setCart(cart.filter((item) => item.id !== product.id));
+  };
   return (
     <div data-theme="light" className="min-h-screen bg-white text-black">
       <Navbar />
       <Hero />
       <UserRating />
       <DigitalTools setActiveTab={setActiveTab} activeTab={activeTab} />
-      {activeTab === "products" ? <ProductList /> : <Cart />}
+      {activeTab === "products" ? (
+        <ProductList handleAddToCart={handleAddToCart} />
+      ) : (
+        <Cart cart={cart} handleRemoveFromCart={handleRemoveFromCart} />
+      )}
     </div>
   );
 };
