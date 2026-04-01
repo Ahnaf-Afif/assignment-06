@@ -11,23 +11,28 @@ import { useState } from "react";
 import GetStarted from "./components/GetStarted/GetStarted.jsx";
 import PrisingSectionMain from "./components/PrisingSection/PrisingSectionMain.jsx";
 import Footer from "./components/Footer/Footer.jsx";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
   const [activeTab, setActiveTab] = useState("products");
   const [cart, setCart] = useState([]);
   const handleAddToCart = (product) => {
     setCart([...cart, product]);
+    toast.success(`${product.name} added to cart`);
   };
   const handleRemoveFromCart = (product) => {
     const index = cart.findIndex((item) => item.id === product.id);
 
     if (index !== -1) {
       setCart([...cart.slice(0, index), ...cart.slice(index + 1)]);
+      toast.info(`${product.name} is removed from cart`);
     }
   };
 
   const setCheckout = () => {
     setCart([]);
+    toast.success("Checkout successful");
   };
 
   return (
@@ -35,6 +40,7 @@ const App = () => {
       <Navbar />
       <Hero />
       <UserRating />
+      <ToastContainer />
       <DigitalTools
         setActiveTab={setActiveTab}
         activeTab={activeTab}
