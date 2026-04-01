@@ -21,9 +21,9 @@ const Cart = ({ cart, handleRemoveFromCart }) => {
         <div className="max-w-9/12 mx-auto mt-10 p-10 shadow-lg rounded-lg bg-base-200">
           <p className="text-2xl font-bold mb-4">Your Cart</p>
           <div>
-            {cart.map((item) => (
+            {cart.map((item, index) => (
               <CartItem
-                key={item.id}
+                key={index}
                 item={item}
                 handleRemoveFromCart={handleRemoveFromCart}
               />

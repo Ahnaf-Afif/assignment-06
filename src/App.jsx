@@ -19,8 +19,13 @@ const App = () => {
     setCart([...cart, product]);
   };
   const handleRemoveFromCart = (product) => {
-    setCart(cart.filter((item) => item.id !== product.id));
+    const index = cart.findIndex((item) => item.id === product.id);
+
+    if (index !== -1) {
+      setCart([...cart.slice(0, index), ...cart.slice(index + 1)]);
+    }
   };
+
   return (
     <div data-theme="light" className="min-h-screen bg-white text-black">
       <Navbar />
