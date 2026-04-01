@@ -4,7 +4,7 @@ import { FaCartShopping } from "react-icons/fa6";
 const Navbar = () => {
   return (
     <div>
-      <div className="navbar bg-base-100 shadow-sm">
+      <div className="navbar bg-base-100 shadow-sm flex flex-col md:flex-row justify-between items-center">
         <div className="navbar-start pl-20">
           <a className=" btn-ghost text-xl">DigiTools</a>
         </div>
@@ -17,10 +17,12 @@ const Navbar = () => {
             <p>FAQ</p>
           </div>
         </div>
-        <div className="navbar-end flex gap-4 items-center pr-20">
+        <div className="navbar-end flex gap-4 items-center pr-20 ">
           <FaCartShopping />
-          <p>Login</p>
-          <button className="btn btn-primary rounded-full">Get Started</button>
+          <p className="hidden md:block">Login</p>
+          <button className="btn btn-primary rounded-full hidden md:block">
+            Get Started
+          </button>
         </div>
       </div>
     </div>

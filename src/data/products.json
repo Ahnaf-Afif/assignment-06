@@ -22,7 +22,7 @@
         "Grammar checker"
       ],
       "buttonText": "Buy Now",
-      "image": "../../public/writing.png",
+      "image": "../../writing.png",
       "pop": "Best Seller"
     },
     {
@@ -37,7 +37,7 @@
       "description": "2000+ premium templates for social media, presentations, and marketing materials.",
       "features": ["2000+ templates", "Monthly updates", "Commercial license"],
       "buttonText": "Buy Now",
-      "image": "../../public/design-tool.png",
+      "image": "../../design-tool.png",
       "pop": "Popular"
     },
     {
@@ -52,7 +52,7 @@
       "description": "Access millions of royalty-free photos, videos, and graphics for your projects.",
       "features": ["10M+ assets", "Commercial use", "No attribution"],
       "buttonText": "Buy Now",
-      "image": "../../public/writing.png",
+      "image": "../../writing.png",
       "pop": "New"
     },
     {
@@ -67,7 +67,7 @@
       "description": "Automate repetitive tasks and streamline your workflow with powerful tools.",
       "features": ["50+ automations", "API access", "Custom workflows"],
       "buttonText": "Buy Now",
-      "image": "../../public/operation.png",
+      "image": "../../operation.png",
       "pop": "Popular"
     },
     {
@@ -82,7 +82,7 @@
       "description": "Create professional resumes and cover letters that land interviews.",
       "features": ["100+ templates", "ATS optimization", "Export to PDF"],
       "buttonText": "Buy Now",
-      "image": "../../public/portfolio.png",
+      "image": "../../portfolio.png",
       "pop": "New"
     },
     {
@@ -97,7 +97,7 @@
       "description": "Complete toolkit for creating engaging social media content across all platforms.",
       "features": ["5000+ assets", "Scheduler included", "Analytics dashboard"],
       "buttonText": "Buy Now",
-      "image": "../../public/social-media.png",
+      "image": "../../social-media.png",
       "pop": "Best Seller"
     }
   ]
