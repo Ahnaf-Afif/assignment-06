@@ -1,6 +1,6 @@
 import React from "react";
 
-const DigitalTools = ({ setActiveTab, activeTab }) => {
+const DigitalTools = ({ setActiveTab, activeTab, cart }) => {
   return (
     <section className="w-full bg-[#f5f5f7] py-16 md:py-20">
       <div className="mx-auto max-w-5xl px-4 text-center">
@@ -35,7 +35,7 @@ const DigitalTools = ({ setActiveTab, activeTab }) => {
                   : "cursor-pointer rounded-full px-7 py-3 text-sm font-medium text-slate-700"
               }
             >
-              Cart (2)
+              Cart {cart.length}
             </button>
           </div>
         </div>

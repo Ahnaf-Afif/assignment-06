@@ -6,10 +6,12 @@ import ProductCard from "./components/Products/ProductCard.jsx";
 import ProductList from "./components/Products/ProductList.jsx";
 import DigitalTools from "./components/DigitalTools/DigitalTools.jsx";
 import Cart from "./components/Cart/Cart.jsx";
+import GetStartedCard from "./components/GetStarted/GetStartedCard.jsx";
 import { useState } from "react";
+import GetStarted from "./components/GetStarted/GetStarted.jsx";
 
 const App = () => {
-  const [activeTab, setActiveTab] = useState("cart");
+  const [activeTab, setActiveTab] = useState("products");
   const [cart, setCart] = useState([]);
   const handleAddToCart = (product) => {
     setCart([...cart, product]);
@@ -22,12 +24,18 @@ const App = () => {
       <Navbar />
       <Hero />
       <UserRating />
-      <DigitalTools setActiveTab={setActiveTab} activeTab={activeTab} />
+      <DigitalTools
+        setActiveTab={setActiveTab}
+        activeTab={activeTab}
+        cart={cart}
+      />
       {activeTab === "products" ? (
         <ProductList handleAddToCart={handleAddToCart} />
       ) : (
         <Cart cart={cart} handleRemoveFromCart={handleRemoveFromCart} />
       )}
+      <GetStarted />
+      <GetStartedCard />
     </div>
   );
 };
