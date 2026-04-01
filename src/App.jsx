@@ -10,6 +10,7 @@ import GetStartedCard from "./components/GetStarted/GetStartedCard.jsx";
 import { useState } from "react";
 import GetStarted from "./components/GetStarted/GetStarted.jsx";
 import PrisingSectionMain from "./components/PrisingSection/PrisingSectionMain.jsx";
+import Footer from "./components/Footer/Footer.jsx";
 
 const App = () => {
   const [activeTab, setActiveTab] = useState("products");
@@ -38,6 +39,7 @@ const App = () => {
       <GetStarted />
       <GetStartedCard />
       <PrisingSectionMain />
+      <Footer />
     </div>
   );
 };
