@@ -4,7 +4,7 @@ const UserRating = () => {
   return (
     <div>
       <div className="w-full bg-linear-to-r from-[#5533FF] via-[#7A1FFF] to-[#C000FF] py-11">
-        <div className="mx-auto flex max-w-5xl items-center justify-center px-6">
+        <div className="mx-auto flex flex-col md:flex-row max-w-5xl items-center justify-center px-6">
           <div className="min-w-[220px] text-center">
             <div className="text-[44px] font-extrabold leading-none text-white">
               50K+

@@ -10,13 +10,13 @@ const Cart = ({ cart, handleRemoveFromCart, setCheckout }) => {
         <div>
           <div className="max-w-9/12 mx-auto mt-10 p-10 shadow-lg rounded-lg bg-base-200">
             <p className="text-2xl font-bold mb-4">Your Cart</p>
+            <p className="text-2xl font-bold mb-4 text-center">
+              Your cart is empty.
+            </p>
             <div className="flex justify-between items-center pt-10 pb-5">
               <p>Total</p>
               <p className="font-bold text-xl">$0</p>
             </div>
-            <button className="btn btn-primary rounded-full w-full">
-              Cart is empty
-            </button>
           </div>
         </div>
       ) : (

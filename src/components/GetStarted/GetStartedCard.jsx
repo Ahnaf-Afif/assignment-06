@@ -5,7 +5,7 @@ import Package from "../../assets/package.png";
 
 const GetStartedCard = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 max-w-10/12 mx-auto">
+    <div className="grid my-5 grid-cols-1 lg:grid-cols-3 gap-5 md:grid-cols-2 max-w-10/12 mx-auto">
       <div className="card bg-base-100 w-96 shadow-xl">
         <div className="ml-80 mt-10">
           <div className=" text-xl px-2.5 py-2 bg-purple-600 text-white rounded-full w-fit">

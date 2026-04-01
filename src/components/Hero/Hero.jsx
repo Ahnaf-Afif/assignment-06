@@ -6,7 +6,7 @@ import heroImage from "../../assets/banner.png";
 
 const Hero = () => {
   return (
-    <div className="flex justify-between items-center max-w-8/12 mx-auto my-15">
+    <div className="flex justify-between items-center flex-col lg:flex-row md:flex-col max-w-8/12 mx-auto my-15 gap-10">
       <div className="space-y-5">
         <p className="text-sm text-purple-600 bg-blue-300 max-w-fit py-1 px-2 rounded-full flex justify-center items-center gap-1">
           <FaRegDotCircle /> New: AI-Powered Tools Available
